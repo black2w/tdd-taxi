@@ -15,9 +15,9 @@ import static org.junit.Assert.assertEquals;
  */
 public class TaxiTest {
     @Test
-    public void query_price_by_dis_and_time() {
+    public void query_price_by_mile_and_time() {
         Taximete taximete = new Taximete();
-        assertEquals(taximete.queryPriceByMileAndTime(2, 0), 6);
+        assertEquals(taximete.queryPriceByMileAndTime(1, 0), 6);
         assertEquals(taximete.queryPriceByMileAndTime(3, 0), 7);
         assertEquals(taximete.queryPriceByMileAndTime(10, 0), 13);
         assertEquals(taximete.queryPriceByMileAndTime(2, 3), 7);
