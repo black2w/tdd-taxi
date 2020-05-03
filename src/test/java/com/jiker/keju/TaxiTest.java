@@ -30,9 +30,9 @@ public class TaxiTest {
         lists.add("1公里，等待0分钟\n");
         lists.add("2公里，等待3分钟\n");
         int[][] arr = {{1, 0}, {2, 3}};
-        assertEquals(reader.queryMileAndTime(lists), arr);
-//        Assert.assertArrayEquals(lists.toArray(), arr);
+        Assert.assertArrayEquals(reader.queryMileAndTime(lists), arr);
     }
+
 
     @Test
     public void query_parms() throws IOException {
