@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.jiker.keju.TaxiTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-05-03T14:22:40" hostname="black2wdeMacBook-Pro.local" time="0.029">
+  <properties/>
+  <testcase name="query_parms" classname="com.jiker.keju.TaxiTest" time="0.02"/>
+  <testcase name="query_miles_and_time" classname="com.jiker.keju.TaxiTest" time="0.004"/>
+  <testcase name="query_price_by_dis_and_time" classname="com.jiker.keju.TaxiTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
