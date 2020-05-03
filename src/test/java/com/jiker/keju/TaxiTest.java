@@ -17,7 +17,7 @@ public class TaxiTest {
     @Test
     public void query_price_by_mile_and_time() {
         Taximete taximete = new Taximete();
-        assertEquals(taximete.queryPriceByMileAndTime(0, 0), 6);
+        assertEquals(taximete.queryPriceByMileAndTime(0, 0), 0);
         assertEquals(taximete.queryPriceByMileAndTime(1, 0), 6);
         assertEquals(taximete.queryPriceByMileAndTime(3, 0), 7);
         assertEquals(taximete.queryPriceByMileAndTime(10, 0), 13);
