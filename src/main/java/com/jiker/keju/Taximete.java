@@ -5,7 +5,7 @@ package com.jiker.keju;
 public class Taximete {
 
     public int queryPriceByMileAndTime(int mile, int time) {
-        if (mile <=0) {
+        if (mile <= 0) {
             return 0;
         } else if (mile <= 2) {
             return (int) Math.round(6 + time * 0.25);
