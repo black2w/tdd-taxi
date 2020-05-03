@@ -14,6 +14,9 @@ import static org.junit.Assert.assertEquals;
  * @version 1.0
  */
 public class TaxiTest {
+    public TaxiTest() throws IOException {
+    }
+
     @Test
     public void query_price_by_mile_and_time() {
         Taximete taximete = new Taximete();
@@ -42,7 +45,28 @@ public class TaxiTest {
         lists.add("3公里,等待0分钟");
         lists.add("10公里,等待0分钟");
         lists.add("2公里,等待3分钟");
+
         assertEquals(reader.queryParms(), lists);
     }
+
+    @Test
+    public void get_total_receipts() throws IOException {
+        Reader reader = new Reader("testData.txt");
+        String receipt = "";
+        Taximete taximete = new Taximete();
+        int[][] parms = reader.queryMileAndTime(reader.queryParms());
+        for (int i = 0; i < parms.length; i++) {
+            int priceInt = taximete.queryPriceByMileAndTime(parms[i][0], parms[i][1]);
+            receipt = receipt + "收费" + priceInt + "元" + "\n";
+        }
+
+        assertEquals(receipt,"收费6元\n" +
+                "收费7元\n" +
+                "收费13元\n" +
+                "收费7元\n");
+    }
+
+
+
 }
 
