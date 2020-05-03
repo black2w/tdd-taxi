@@ -1,9 +1,8 @@
 package com.jiker.keju;
-
 import org.junit.Assert;
 import org.junit.Test;
-import com.jiker.keju.*;
-
+import com.jiker.keju.Reader;
+import com.jiker.keju.Taximete;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
