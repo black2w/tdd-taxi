@@ -1,4 +1,5 @@
 package com.jiker.keju;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -6,17 +7,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author black2w on 2020/5/3.
- * @version 1.0
- */
 public class Reader {
     String filePath = "";
 
     public Reader(String testDataFile) {
         filePath = "src/main/resources/" + testDataFile;
     }
-
 
     public int[][] queryMileAndTime(List<String> datas) {
         int[][] mileAndTime = new int[datas.size()][2];
@@ -32,9 +28,7 @@ public class Reader {
         String line;
         BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(filePath)));
         while ((line = bufferedReader.readLine()) != null) {
-            if (!line.trim().equals("")){
-                lists.add(line.trim());
-            }
+            lists.add(line.trim());
         }
         return lists;
     }
